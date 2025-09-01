@@ -1,0 +1,56 @@
+Module 1: Data Preprocessing & EDA – Planning Guide
+
+Objective
+
+The aim of this module is to collect air quality data from sources like CPCB (Central Pollution Control Board) and OpenAQ, preprocess it to handle missing values and irregularities, and perform Exploratory Data Analysis (EDA) to understand pollutant trends and correlations. Finally, the processed dataset will be resampled and prepared for future forecasting tasks.
+
+
+Steps Planned
+
+1. Data Collection
+
+Identify reliable datasets:
+CPCB official portal
+OpenAQ API / downloadable datasets
+Download datasets in CSV/JSON format.
+Ensure data contains key pollutants (e.g., PM2.5, PM10, NO₂, SO₂, O₃, CO) along with date/time and location.
+
+
+2. Data Preprocessing
+
+Cleaning:
+Remove duplicates.
+Handle missing values (interpolation, forward/backward fill).
+Standardize column names and units (e.g., µg/m³).
+Datetime Handling:
+Convert timestamp columns to datetime format.
+Set datetime as index for time-series operations.
+Resampling:
+Resample data to daily averages (or hourly if required).
+Ensure consistent time intervals across dataset.
+
+
+3. Exploratory Data Analysis (EDA)
+
+Univariate Analysis:
+Plot pollutant levels (line plots, histograms).
+Check seasonal/temporal patterns (daily, monthly, yearly trends).
+Bivariate/Multivariate Analysis:
+Correlation matrix between pollutants.
+Scatter plots/heatmaps to study relationships.
+Geographical Trends (if location data available):
+Compare air quality across cities/stations.
+
+
+4. Feature Preparation for Forecasting
+
+Generate lag features (e.g., pollutant values from previous days).
+Create rolling averages (e.g., 7-day, 30-day).
+Add external features if available (temperature, humidity, wind speed).
+Store processed dataset as a clean CSV for further modules.
+
+
+Expected Outcome
+A clean and structured dataset ready for modeling.
+Visual insights into pollutant trends and correlations.
+Prepared features (lags, rolling averages) for forecasting tasks in the next module.
